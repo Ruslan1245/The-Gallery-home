@@ -171,16 +171,6 @@
   margin-bottom: 12px;
   font-weight: 500;
 }
-.b2b-page .cap-tile-btn {
-  display: inline-block;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.6);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 9px 18px;
-  text-decoration: none;
-}
 .b2b-page .cap-expand-btn {
   display: flex;
   align-items: center;
@@ -745,7 +735,7 @@
   .b2b-page .hero-content { padding: 0 24px; }
   .b2b-page .hero-title { font-size: 28px; }
   .b2b-page .hero-sub { font-size: 13px; }
-  .b2b-page .hero-cta { flex-direction: column; gap: 16px; }
+  .b2b-page .hero-cta { flex-direction: column; gap: 10px; }
   .b2b-page .who-section { padding: 48px 24px; }
   .b2b-page .who-tabs { flex-wrap: wrap; }
   .b2b-page .who-tab { flex: 0 0 50%; border-bottom: 1px solid var(--border); }
@@ -782,6 +772,33 @@
   .b2b-page .closing-inner { padding: 60px 24px; }
   .b2b-page .closing-title { font-size: 24px; }
   .b2b-page .closing-btns { flex-direction: column; align-items: center; }
+  .b2b-page .hero { height: auto; min-height: 400px; }
+  .b2b-page .slider-arrow.left { left: 8px; }
+  .b2b-page .slider-arrow.right { right: 8px; }
+}
+
+@media (max-width: 425px) {
+  .b2b-page .hero-cta { gap: 4px; }
+  .b2b-page .hero-cta .divider { display: none; }
+  .b2b-page .hero-sub { margin-bottom: 20px; }
+  .b2b-page .benefits-section { padding: 20px; }
+  .b2b-page .benefit-v2 { padding: 20px; }
+  .b2b-page .benefit-v2-title { font-size: 11px; }
+  .b2b-page .benefit-v2-text { font-size: 12px; }
+  .b2b-page .midpage-cta { align-items: center; }
+  .b2b-page .midpage-cta-text { text-align: center; }
+  .b2b-page .midpage-cta-sub { text-align: center; }
+}
+
+@media (max-width: 375px) {
+  .b2b-page .benefits-v2 { grid-template-columns: 1fr; }
+  .b2b-page .diff-v2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 320px) {
+  .b2b-page .who-tabs { flex-direction: column; }
+  .b2b-page .who-tab { flex: 0 0 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .b2b-page .who-tab:last-child { border-bottom: none; }
 }
 </style>
 
@@ -827,7 +844,6 @@
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
           <p class="cap-tile-title">Bespoke Furniture</p>
-          <a href="#apply" class="cap-tile-btn">Enquire Now</a>
         </div>
       </div>
       <div class="cap-tile">
@@ -835,7 +851,6 @@
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
           <p class="cap-tile-title">Bespoke Interiors</p>
-          <a href="#apply" class="cap-tile-btn">Enquire Now</a>
         </div>
       </div>
       <div class="cap-tile">
@@ -843,7 +858,6 @@
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
           <p class="cap-tile-title">Interior Design Service</p>
-          <a href="#apply" class="cap-tile-btn">Enquire Now</a>
         </div>
       </div>
     </div>
@@ -862,7 +876,6 @@
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
           <p class="cap-tile-title">Media Walls & Joinery</p>
-          <a href="#apply" class="cap-tile-btn">Enquire Now</a>
         </div>
       </div>
       <div class="cap-tile">
@@ -870,7 +883,6 @@
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
           <p class="cap-tile-title">Marble & Travertine</p>
-          <a href="#apply" class="cap-tile-btn">Enquire Now</a>
         </div>
       </div>
       <div class="cap-tile">
@@ -878,7 +890,6 @@
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
           <p class="cap-tile-title">Full Home Furnishing</p>
-          <a href="#apply" class="cap-tile-btn">Enquire Now</a>
         </div>
       </div>
     </div>
@@ -1297,11 +1308,14 @@
   }
 
   var b2bCurrent = 0;
-  var b2bTotal = 3;
   function b2bSlide(dir) {
-    b2bCurrent = (b2bCurrent + dir + b2bTotal) % b2bTotal;
-    var pct = b2bCurrent * (100 / 3);
-    document.getElementById('b2bSliderTrack').style.transform = 'translateX(-' + pct + '%)';
+    var track = document.getElementById('b2bSliderTrack');
+    var slides = track.querySelectorAll('.slide');
+    var visibleCount = window.innerWidth <= 768 ? 1 : 2;
+    var maxPosition = slides.length - visibleCount;
+    b2bCurrent = Math.max(0, Math.min(b2bCurrent + dir, maxPosition));
+    var slideWidth = slides[0].offsetWidth + 4;
+    track.style.transform = 'translateX(-' + (b2bCurrent * slideWidth) + 'px)';
   }
 </script>
 
