@@ -1,0 +1,344 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "video_a7z8En": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/25.06.28_8b44756b-5848-481b-9a72-b8fc3588a776-ezgif.com-resize-video.mp4",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/ea22e425ea30457599d4ae998bae5f16.mp4",
+            "fallback_image": "shopify://shop_images/Screenshot_2025-07-20_145358.png",
+            "allow_sound": false,
+            "subheading": "",
+            "title": "THE HOME OF BESPOKE LUXURY",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "video_a7z8En"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "lg",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
+    "collection_list_BCLVPn": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_66zyjQ": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "new-arrivals",
+            "image": "shopify://shop_images/CAM01-V2_bd4ecec7-32df-467b-b4a5-097f6351c9ca.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "New arrivals",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_hhMLRh": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "coffee-tables",
+            "image": "shopify://shop_images/CAM02_9335114f-c5ee-40d4-9de4-c9479f801ef1.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "coffee tables",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_hwdgmX": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "collection": "bespoke-sofas",
+            "image": "shopify://shop_images/CAM01-V3_4cd5d34f-5d02-468e-9e72-b02e13615881.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "SOFAS",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_qRKFhF": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "dining-table",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "DINING TABLES",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_ALLeBV": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "collection": "shop-all-rugs",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "HANDMADE RUGS",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_66zyjQ",
+        "collection_hhMLRh",
+        "collection_hwdgmX",
+        "collection_qRKFhF",
+        "collection_ALLeBV"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "image_size": "xs",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "bespokeinteriors",
+            "image": "shopify://shop_images/CAM02_4aa1b301-6cee-4573-9e74-eacba739ff15.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-center text-center",
+            "subheading": "",
+            "title": "Bespoke Interiors",
+            "button_text": "Enquire  NOW",
+            "button_link": "shopify://collections/bespokeinteriors",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "bespokeinteriors",
+            "image": "shopify://shop_images/CAM01_dc40afb0-0797-4291-80c0-acb5712e8d57.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-center text-center",
+            "subheading": "",
+            "title": "Interior Design Service",
+            "button_text": "ENQUIRE NOW",
+            "button_link": "shopify://pages/bespoke-interiors",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "image_size": "xs",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 2,
+        "subheading": "",
+        "title": "interiors by the gallery",
+        "content": ""
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "side-table",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 0.2,
+        "vertical_spacing_factor": 0.2,
+        "subheading": ""
+      }
+    },
+    "17512905811c734a93": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_Dqybwb": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_Dqybwb"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "image_with_text_block_87ALWW": {
+      "type": "image-with-text-block",
+      "blocks": {
+        "subheading_e7yW9k": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "BESPOKE INTERIORS"
+          }
+        },
+        "liquid_FxHiAh": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<h4>lets make your house a\nhome</h4>"
+          }
+        },
+        "richtext_Q6YGHA": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>Explore a world of tailor made luxury with our unique range of custom made home interior options.</p><p>Let's embark on a journey to transform your living space into a personalised haven that reflects your style and personality.</p>"
+          }
+        },
+        "link_jfBrn7": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "text": "Learn more",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_e7yW9k",
+        "liquid_FxHiAh",
+        "richtext_Q6YGHA",
+        "link_jfBrn7"
+      ],
+      "name": "t:sections.image_with_text_block.presets.image_with_text_block.name",
+      "settings": {
+        "color_scheme": "",
+        "image_size": "lg",
+        "image": "shopify://shop_images/WhatsApp_Image_2025-06-30_at_15.37.33_52790a47.jpg",
+        "content_width": "lg",
+        "enable_parallax": true,
+        "remove_vertical_spacing": true
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "collection_list_BCLVPn",
+    "collection-list",
+    "featured-collections",
+    "17512905811c734a93",
+    "image_with_text_block_87ALWW"
+  ]
+}

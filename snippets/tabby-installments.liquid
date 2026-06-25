@@ -1,0 +1,113 @@
+{%- liquid
+  assign locale = localization.language.iso_code
+-%}
+<div id="TabbyPromo"></div>
+<script>
+(function() {
+  const script = document.createElement('script');
+  script.src = 'https://checkout.tabby.ai/tabby-promo.js';
+  script.async = true;
+  script.onload = () => {
+    const SUPPORTED_CURRENCIES = {
+      AED: 'AED',
+      KWD: 'KWD',
+      SAR: 'SAR',
+      BHD: 'BHD',
+      QAR: 'QAR',
+    };
+
+    const CURRENCY_NAME_TO_CODE_MAP = {
+      AED: 'AED',
+      KWD: 'KWD',
+      SAR: 'SAR',
+      BHD: 'BHD',
+      QAR: 'QAR',
+      KD: 'KWD',
+      SR: 'SAR',
+      BD: 'BHD',
+      Dh: 'AED',
+      Dhs: 'AED',
+    };
+
+    const CURRENCY_DIGITS_COUNT = {
+      AED: 2,
+      SAR: 2,
+      BHD: 3,
+      QAR: 2,
+      KWD: 3,
+    };
+
+    const priceRegExp = /[0-9\.,']+\b/;
+    const currencyRegExp = new RegExp(`(${Object.keys(CURRENCY_NAME_TO_CODE_MAP).join('|')})`);
+    const installmentsCount = 4;
+    const tabbyElementId = '#TabbyPromo';
+    const locale = '{{ locale }}';
+
+    // Directly grab the first visible money element
+    let priceElement = document.querySelector('.money');
+
+    if (!priceElement) {
+      console.warn('No .money element found for Tabby promo.');
+      return;
+    }
+
+    console.log("Found price element:", priceElement);
+
+    const initializeTabbyPromo = ({ element, locale }) => {
+      const text = element.textContent;
+      if (!text) {
+        console.warn('No text content inside price element.');
+        return;
+      }
+
+      const priceMatch = text.match(priceRegExp);
+      const currencyMatch = text.match(currencyRegExp);
+
+      if (!priceMatch || !currencyMatch) {
+        console.warn('Cannot recognize currency or price. Promo will be closed.');
+        document.querySelector(tabbyElementId).style.display = 'none';
+        return;
+      }
+
+      const layoutPrice = priceMatch[0];
+      const layoutCurrency = currencyMatch[0];
+      const price = parseFloat(layoutPrice.replace(/[^\d.]/g, ''));
+      const currency = CURRENCY_NAME_TO_CODE_MAP[layoutCurrency];
+
+      if (price && currency) {
+        document.querySelector(tabbyElementId).style.display = 'block';
+
+        console.log(`Tabby promo: ${currency} ${price}`);
+
+        new TabbyPromo({
+          selector: tabbyElementId,
+          currency,
+          price: price / Math.pow(10, CURRENCY_DIGITS_COUNT[currency]),
+          locale,
+          installmentsCount,
+        });
+      } else {
+        console.warn('Unrecognized currency/price. Promo will be closed.');
+        document.querySelector(tabbyElementId).style.display = 'none';
+      }
+    };
+
+    initializeTabbyPromo({ element: priceElement, locale });
+
+    // Observe changes to price content dynamically
+    const observer = new MutationObserver(() => {
+      initializeTabbyPromo({ element: priceElement, locale });
+    });
+
+    observer.observe(priceElement, { subtree: true, childList: true });
+  };
+
+  document.body.appendChild(script);
+})();
+
+</script>
+<style>
+  #TabbyPromo div:empty, #TabbyDialogContainer div:empty {
+    display: block;
+  }
+</style>
