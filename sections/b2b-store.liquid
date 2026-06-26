@@ -2,7 +2,7 @@
 
 <style>
 .b2b-page {
-  --bg: #f0eeea;
+  --bg: #efefef;
   --dark: #1c1c1c;
   --white: #ffffff;
   --border: #d8d5d0;
@@ -809,55 +809,55 @@
     <div class="hero-img"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-label">Trade & Partnership Programme</p>
-      <h1 class="hero-title">Your Trusted Partner For<br>Bespoke Luxury Interiors</h1>
-      <p class="hero-sub">Supporting interior designers, architects, developers, real estate professionals and hospitality projects across the UAE and GCC.</p>
+      <p class="hero-label">{{ section.settings.hero_label }}</p>
+      <h1 class="hero-title">{{ section.settings.hero_title_1 }}<br>{{ section.settings.hero_title_2 }}</h1>
+      <p class="hero-sub">{{ section.settings.hero_subtitle }}</p>
       <div class="hero-cta">
-        <a href="#apply">Apply For Trade Account</a>
+        <a href="{{ section.settings.hero_cta1_url }}">{{ section.settings.hero_cta1_text }}</a>
         <span class="divider">|</span>
-        <a href="#apply">Book A Consultation</a>
+        <a href="{{ section.settings.hero_cta2_url }}">{{ section.settings.hero_cta2_text }}</a>
       </div>
     </div>
   </div>
 
   <!-- WHO WE WORK WITH -->
   <div class="who-section">
-    <p class="section-label">Our Partners</p>
-    <p class="section-title">Who We Work With</p>
+    <p class="section-label">{{ section.settings.who_label }}</p>
+    <p class="section-title">{{ section.settings.who_title }}</p>
     <div class="who-tabs">
-      <div class="who-tab"><span class="who-tab-num">01</span>Interior Designers</div>
-      <div class="who-tab"><span class="who-tab-num">02</span>Architects</div>
-      <div class="who-tab"><span class="who-tab-num">03</span>Property Developers</div>
-      <div class="who-tab"><span class="who-tab-num">04</span>Hospitality</div>
-      <div class="who-tab"><span class="who-tab-num">05</span>Real Estate</div>
-      <div class="who-tab"><span class="who-tab-num">06</span>Holiday Home Operators</div>
+      <div class="who-tab"><span class="who-tab-num">01</span>{{ section.settings.who_tab_1 }}</div>
+      <div class="who-tab"><span class="who-tab-num">02</span>{{ section.settings.who_tab_2 }}</div>
+      <div class="who-tab"><span class="who-tab-num">03</span>{{ section.settings.who_tab_3 }}</div>
+      <div class="who-tab"><span class="who-tab-num">04</span>{{ section.settings.who_tab_4 }}</div>
+      <div class="who-tab"><span class="who-tab-num">05</span>{{ section.settings.who_tab_5 }}</div>
+      <div class="who-tab"><span class="who-tab-num">06</span>{{ section.settings.who_tab_6 }}</div>
     </div>
   </div>
 
   <!-- OUR CAPABILITIES -->
   <div class="cap-section">
-    <p class="section-label">What We Do</p>
-    <p class="section-title">Our Capabilities</p>
+    <p class="section-label">{{ section.settings.cap_label }}</p>
+    <p class="section-title">{{ section.settings.cap_title }}</p>
     <div class="cap-row">
       <div class="cap-tile">
         <div class="cap-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80')"></div>
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
-          <p class="cap-tile-title">Bespoke Furniture</p>
+          <p class="cap-tile-title">{{ section.settings.cap_tile_1_title }}</p>
         </div>
       </div>
       <div class="cap-tile">
         <div class="cap-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80')"></div>
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
-          <p class="cap-tile-title">Bespoke Interiors</p>
+          <p class="cap-tile-title">{{ section.settings.cap_tile_2_title }}</p>
         </div>
       </div>
       <div class="cap-tile">
         <div class="cap-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80')"></div>
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
-          <p class="cap-tile-title">Interior Design Service</p>
+          <p class="cap-tile-title">{{ section.settings.cap_tile_3_title }}</p>
         </div>
       </div>
     </div>
@@ -875,21 +875,21 @@
         <div class="cap-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=800&q=80')"></div>
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
-          <p class="cap-tile-title">Media Walls & Joinery</p>
+          <p class="cap-tile-title">{{ section.settings.cap_tile_4_title }}</p>
         </div>
       </div>
       <div class="cap-tile">
         <div class="cap-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80')"></div>
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
-          <p class="cap-tile-title">Marble & Travertine</p>
+          <p class="cap-tile-title">{{ section.settings.cap_tile_5_title }}</p>
         </div>
       </div>
       <div class="cap-tile">
         <div class="cap-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80')"></div>
         <div class="cap-tile-overlay"></div>
         <div class="cap-tile-content">
-          <p class="cap-tile-title">Full Home Furnishing</p>
+          <p class="cap-tile-title">{{ section.settings.cap_tile_6_title }}</p>
         </div>
       </div>
     </div>
@@ -898,18 +898,18 @@
   <!-- WHY PARTNER -->
   <div class="why-section">
     <div class="why-header">
-      <p class="section-label">Partnership</p>
-      <p class="section-title">Why Partner With The Gallery Home</p>
+      <p class="section-label">{{ section.settings.why_label }}</p>
+      <p class="section-title">{{ section.settings.why_title }}</p>
     </div>
 
     <div class="why-row">
       <div class="why-content">
-        <p class="why-label">Design & Craft</p>
-        <p class="why-title">Designed & Handcrafted<br>In Dubai</p>
+        <p class="why-label">{{ section.settings.why_row1_label }}</p>
+        <p class="why-title">{{ section.settings.why_row1_title_1 }}<br>{{ section.settings.why_row1_title_2 }}</p>
         <ul class="why-list">
-          <li>All pieces manufactured locally in our Dubai facility</li>
-          <li>Full quality control from material to delivery</li>
-          <li>Faster lead times than imported alternatives</li>
+          <li>{{ section.settings.why_row1_bullet_1 }}</li>
+          <li>{{ section.settings.why_row1_bullet_2 }}</li>
+          <li>{{ section.settings.why_row1_bullet_3 }}</li>
         </ul>
       </div>
       <div class="why-img" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80')"></div>
@@ -918,12 +918,12 @@
 
     <div class="why-row reverse">
       <div class="why-content">
-        <p class="why-label">Project Support</p>
-        <p class="why-title">Dedicated Account<br>Manager For Every Project</p>
+        <p class="why-label">{{ section.settings.why_row2_label }}</p>
+        <p class="why-title">{{ section.settings.why_row2_title_1 }}<br>{{ section.settings.why_row2_title_2 }}</p>
         <ul class="why-list">
-          <li>One point of contact from brief to installation</li>
-          <li>Access to our full material and fabric library</li>
-          <li>Trade pricing and referral commission programme</li>
+          <li>{{ section.settings.why_row2_bullet_1 }}</li>
+          <li>{{ section.settings.why_row2_bullet_2 }}</li>
+          <li>{{ section.settings.why_row2_bullet_3 }}</li>
         </ul>
       </div>
       <div class="why-img" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80')"></div>
@@ -932,75 +932,75 @@
 
     <div class="why-row">
       <div class="why-content">
-        <p class="why-label">End To End</p>
-        <p class="why-title">White Glove Delivery<br>& Installation</p>
+        <p class="why-label">{{ section.settings.why_row3_label }}</p>
+        <p class="why-title">{{ section.settings.why_row3_title_1 }}<br>{{ section.settings.why_row3_title_2 }}</p>
         <ul class="why-list">
-          <li>Professional installation across Dubai, Abu Dhabi & GCC</li>
-          <li>Coordinated around your project schedule</li>
-          <li>Custom sizing and site measurements included</li>
+          <li>{{ section.settings.why_row3_bullet_1 }}</li>
+          <li>{{ section.settings.why_row3_bullet_2 }}</li>
+          <li>{{ section.settings.why_row3_bullet_3 }}</li>
         </ul>
       </div>
       <div class="why-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80')"></div>
     </div>
   </div>
 
-  <!-- TESTIMONIALS — moved up -->
+  <!-- TESTIMONIALS -->
   <div class="testi-section">
-    <p class="section-label">Client Testimonials</p>
-    <p class="section-title">What Our Trade Partners Say</p>
+    <p class="section-label">{{ section.settings.testi_label }}</p>
+    <p class="section-title">{{ section.settings.testi_title }}</p>
     <div class="testi-grid">
       <div class="testi-card">
-        <p class="testi-quote">"The Gallery Home has become our go-to supplier for everything from bespoke joinery to full home furnishing packages. Their ability to deliver an entire villa project from one address saves us months of coordination."</p>
+        <p class="testi-quote">"{{ section.settings.testi_1_quote }}"</p>
         <div class="testi-rule"></div>
-        <p class="testi-name">Sarah Al Mansoori</p>
-        <p class="testi-company">Principal Designer, SM Interiors — Dubai</p>
+        <p class="testi-name">{{ section.settings.testi_1_name }}</p>
+        <p class="testi-company">{{ section.settings.testi_1_company }}</p>
       </div>
       <div class="testi-card">
-        <p class="testi-quote">"Dubai-based manufacturing means we actually hit our install dates. We've used European suppliers before and the lead times were unworkable for our developer clients. The Gallery Home solves that completely."</p>
+        <p class="testi-quote">"{{ section.settings.testi_2_quote }}"</p>
         <div class="testi-rule"></div>
-        <p class="testi-name">James Whitfield</p>
-        <p class="testi-company">Director, Whitfield Associates Architecture</p>
+        <p class="testi-name">{{ section.settings.testi_2_name }}</p>
+        <p class="testi-company">{{ section.settings.testi_2_company }}</p>
       </div>
       <div class="testi-card">
-        <p class="testi-quote">"From our first conversation to the final installation on a 24-apartment project, the level of communication was exceptional. Having a dedicated account manager who knows every detail of your project is invaluable."</p>
+        <p class="testi-quote">"{{ section.settings.testi_3_quote }}"</p>
         <div class="testi-rule"></div>
-        <p class="testi-name">Lena Kowalski</p>
-        <p class="testi-company">Head of Interiors, Azizi Developments</p>
+        <p class="testi-name">{{ section.settings.testi_3_name }}</p>
+        <p class="testi-company">{{ section.settings.testi_3_company }}</p>
       </div>
     </div>
   </div>
 
   <!-- THE PROCESS -->
   <div class="process-section">
-    <p class="section-label">How It Works</p>
-    <p class="section-title">The Process</p>
+    <p class="section-label">{{ section.settings.process_label }}</p>
+    <p class="section-title">{{ section.settings.process_title }}</p>
     <div class="process-timeline">
       <div class="process-item">
         <div class="process-num-big">01</div>
         <div>
-          <p class="process-step-title">Consultation</p>
-          <p class="process-step-text">We meet to understand your project brief, timeline and requirements — in person at our Dubai Hills showroom or virtually.</p>
+          <p class="process-step-title">{{ section.settings.process_1_title }}</p>
+          <p class="process-step-text">{{ section.settings.process_1_text }}</p>
         </div>
       </div>
       <div class="process-item">
         <div class="process-num-big">02</div>
         <div>
-          <p class="process-step-title">Design & Specification</p>
-          <p class="process-step-text">Our team prepares detailed specifications, material samples and renders tailored to your project and client's vision.</p>
+          <p class="process-step-title">{{ section.settings.process_2_title }}</p>
+          <p class="process-step-text">{{ section.settings.process_2_text }}</p>
         </div>
       </div>
       <div class="process-item">
         <div class="process-num-big">03</div>
         <div>
-          <p class="process-step-title">Production</p>
-          <p class="process-step-text">All bespoke pieces are handcrafted in our Dubai facility with full quality oversight and regular progress updates.</p>
+          <p class="process-step-title">{{ section.settings.process_3_title }}</p>
+          <p class="process-step-text">{{ section.settings.process_3_text }}</p>
         </div>
       </div>
       <div class="process-item">
         <div class="process-num-big">04</div>
         <div>
-          <p class="process-step-title">Delivery & Installation</p>
-          <p class="process-step-text">White glove delivery and professional installation, coordinated around your project schedule across the UAE and GCC.</p>
+          <p class="process-step-title">{{ section.settings.process_4_title }}</p>
+          <p class="process-step-text">{{ section.settings.process_4_text }}</p>
         </div>
       </div>
     </div>
@@ -1009,81 +1009,81 @@
   <!-- MID-PAGE CTA -->
   <div class="midpage-cta">
     <div>
-      <p class="midpage-cta-text">Ready to become a trade partner?</p>
-      <p class="midpage-cta-sub">Join designers, architects and developers already working with The Gallery Home.</p>
+      <p class="midpage-cta-text">{{ section.settings.mid_text }}</p>
+      <p class="midpage-cta-sub">{{ section.settings.mid_sub }}</p>
     </div>
-    <a href="#apply" class="btn-cta-white">Apply For Trade Account</a>
+    <a href="{{ section.settings.mid_btn_url }}" class="btn-cta-white">{{ section.settings.mid_btn_text }}</a>
   </div>
 
   <!-- PARTNER BENEFITS -->
   <div class="benefits-section">
-    <p class="section-label">Trade Programme</p>
-    <p class="section-title">Partner Benefits</p>
+    <p class="section-label">{{ section.settings.benefits_label }}</p>
+    <p class="section-title">{{ section.settings.benefits_title }}</p>
     <div class="benefits-v2">
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <path d="M8 20h24M20 8v24"/><circle cx="20" cy="20" r="14"/>
         </svg>
-        <p class="benefit-v2-title">Trade Pricing</p>
-        <p class="benefit-v2-text">Exclusive rates for registered trade partners on all products and services.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_1_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_1_text }}</p>
       </div>
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <rect x="8" y="12" width="24" height="18" rx="1"/><path d="M14 12V9a6 6 0 0112 0v3"/>
         </svg>
-        <p class="benefit-v2-title">Referral Commission</p>
-        <p class="benefit-v2-text">Earn commission on every referral through our structured partnership programme.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_2_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_2_text }}</p>
       </div>
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <circle cx="20" cy="14" r="6"/><path d="M8 32c0-6.627 5.373-12 12-12s12 5.373 12 12"/>
         </svg>
-        <p class="benefit-v2-title">Account Manager</p>
-        <p class="benefit-v2-text">A dedicated account manager for every trade partner from day one.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_3_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_3_text }}</p>
       </div>
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <path d="M10 30V16l10-8 10 8v14"/><rect x="16" y="22" width="8" height="8"/>
         </svg>
-        <p class="benefit-v2-title">Priority Production</p>
-        <p class="benefit-v2-text">Trade partners receive priority scheduling across all production lines.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_4_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_4_text }}</p>
       </div>
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <rect x="8" y="8" width="10" height="10"/><rect x="22" y="8" width="10" height="10"/>
           <rect x="8" y="22" width="10" height="10"/><rect x="22" y="22" width="10" height="10"/>
         </svg>
-        <p class="benefit-v2-title">Custom Sizing</p>
-        <p class="benefit-v2-text">Every piece made to your exact project dimensions — no standard sizes.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_5_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_5_text }}</p>
       </div>
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <path d="M10 20h20M20 10v20"/><path d="M10 10l20 20M30 10L10 30"/>
         </svg>
-        <p class="benefit-v2-title">Site Measurements</p>
-        <p class="benefit-v2-text">Our team visits your project site to take precise measurements before production.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_6_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_6_text }}</p>
       </div>
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <circle cx="20" cy="20" r="12"/><path d="M20 8v4M20 28v4M8 20h4M28 20h4"/>
         </svg>
-        <p class="benefit-v2-title">GCC Project Support</p>
-        <p class="benefit-v2-text">Full delivery and installation support across UAE, Saudi Arabia and GCC.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_7_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_7_text }}</p>
       </div>
       <div class="benefit-v2">
         <svg class="benefit-v2-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
           <rect x="10" y="10" width="20" height="26" rx="1"/><path d="M15 18h10M15 23h10M15 28h6"/>
         </svg>
-        <p class="benefit-v2-title">Material Samples</p>
-        <p class="benefit-v2-text">Access to our full library of material and fabric samples for client presentations.</p>
+        <p class="benefit-v2-title">{{ section.settings.benefit_8_title }}</p>
+        <p class="benefit-v2-text">{{ section.settings.benefit_8_text }}</p>
       </div>
     </div>
   </div>
 
   <!-- PORTFOLIO SLIDER -->
   <div class="portfolio-section">
-    <p class="section-label">Portfolio</p>
-    <p class="section-title">Recent Projects</p>
+    <p class="section-label">{{ section.settings.portfolio_label }}</p>
+    <p class="section-title">{{ section.settings.portfolio_title }}</p>
     <div class="slider-wrap">
       <button class="slider-arrow left" onclick="b2bSlide(-1)">
         <svg viewBox="0 0 24 24" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
@@ -1095,49 +1095,49 @@
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=900&q=80')">
           <div class="slide-overlay"></div>
           <div class="slide-info">
-            <p class="slide-type">Residential — Dubai Hills</p>
-            <p class="slide-name">Private Villa Fit-Out</p>
-            <p class="slide-services">Bespoke Furniture · Media Wall · Marble · Curtains</p>
+            <p class="slide-type">{{ section.settings.slide_1_type }}</p>
+            <p class="slide-name">{{ section.settings.slide_1_name }}</p>
+            <p class="slide-services">{{ section.settings.slide_1_services }}</p>
           </div>
         </div>
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80')">
           <div class="slide-overlay"></div>
           <div class="slide-info">
-            <p class="slide-type">Hospitality — Downtown Dubai</p>
-            <p class="slide-name">Boutique Hotel Interiors</p>
-            <p class="slide-services">Full Furnishing · Joinery · Soft Furnishings</p>
+            <p class="slide-type">{{ section.settings.slide_2_type }}</p>
+            <p class="slide-name">{{ section.settings.slide_2_name }}</p>
+            <p class="slide-services">{{ section.settings.slide_2_services }}</p>
           </div>
         </div>
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1505693314120-0d443867891c?w=900&q=80')">
           <div class="slide-overlay"></div>
           <div class="slide-info">
-            <p class="slide-type">Developer — Palm Jumeirah</p>
-            <p class="slide-name">Luxury Apartment Package</p>
-            <p class="slide-services">Wardrobes · Bespoke Furniture · Feature Walls</p>
+            <p class="slide-type">{{ section.settings.slide_3_type }}</p>
+            <p class="slide-name">{{ section.settings.slide_3_name }}</p>
+            <p class="slide-services">{{ section.settings.slide_3_services }}</p>
           </div>
         </div>
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80')">
           <div class="slide-overlay"></div>
           <div class="slide-info">
-            <p class="slide-type">Residential — Emirates Hills</p>
-            <p class="slide-name">Full Home Furnishing</p>
-            <p class="slide-services">Furniture · Marble · Curtains · Joinery</p>
+            <p class="slide-type">{{ section.settings.slide_4_type }}</p>
+            <p class="slide-name">{{ section.settings.slide_4_name }}</p>
+            <p class="slide-services">{{ section.settings.slide_4_services }}</p>
           </div>
         </div>
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80')">
           <div class="slide-overlay"></div>
           <div class="slide-info">
-            <p class="slide-type">Commercial — Business Bay</p>
-            <p class="slide-name">Office & Reception Fit-Out</p>
-            <p class="slide-services">Bespoke Joinery · Upholstery · Stone</p>
+            <p class="slide-type">{{ section.settings.slide_5_type }}</p>
+            <p class="slide-name">{{ section.settings.slide_5_name }}</p>
+            <p class="slide-services">{{ section.settings.slide_5_services }}</p>
           </div>
         </div>
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80')">
           <div class="slide-overlay"></div>
           <div class="slide-info">
-            <p class="slide-type">Developer — Downtown Dubai</p>
-            <p class="slide-name">24-Unit Apartment Package</p>
-            <p class="slide-services">Furniture · Wardrobes · Marble Feature Walls</p>
+            <p class="slide-type">{{ section.settings.slide_6_type }}</p>
+            <p class="slide-name">{{ section.settings.slide_6_name }}</p>
+            <p class="slide-services">{{ section.settings.slide_6_services }}</p>
           </div>
         </div>
       </div>
@@ -1146,55 +1146,55 @@
 
   <!-- WHY DESIGNERS CHOOSE US -->
   <div class="diff-section">
-    <p class="section-label">Why Us</p>
-    <p class="section-title">Why Designers Choose The Gallery Home</p>
+    <p class="section-label">{{ section.settings.diff_label }}</p>
+    <p class="section-title">{{ section.settings.diff_title }}</p>
     <div class="diff-v2">
       <div class="diff-card">
         <div class="diff-card-img" style="background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=80')"></div>
         <div class="diff-card-blur"></div>
         <div class="diff-card-body">
-          <p class="diff-card-title">UAE Manufacturing</p>
-          <p class="diff-card-text">Everything designed and handcrafted in Dubai — full quality control, no long imports.</p>
+          <p class="diff-card-title">{{ section.settings.diff_1_title }}</p>
+          <p class="diff-card-text">{{ section.settings.diff_1_text }}</p>
         </div>
       </div>
       <div class="diff-card">
         <div class="diff-card-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80')"></div>
         <div class="diff-card-blur"></div>
         <div class="diff-card-body">
-          <p class="diff-card-title">Custom Dimensions</p>
-          <p class="diff-card-text">Every piece made to exact specifications — no compromises on size or proportion.</p>
+          <p class="diff-card-title">{{ section.settings.diff_2_title }}</p>
+          <p class="diff-card-text">{{ section.settings.diff_2_text }}</p>
         </div>
       </div>
       <div class="diff-card">
         <div class="diff-card-img" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=80')"></div>
         <div class="diff-card-blur"></div>
         <div class="diff-card-body">
-          <p class="diff-card-title">Bespoke Marble & Travertine</p>
-          <p class="diff-card-text">In-house stone fabrication across a curated library of natural marbles and travertines.</p>
+          <p class="diff-card-title">{{ section.settings.diff_3_title }}</p>
+          <p class="diff-card-text">{{ section.settings.diff_3_text }}</p>
         </div>
       </div>
       <div class="diff-card">
         <div class="diff-card-img" style="background-image:url('https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=700&q=80')"></div>
         <div class="diff-card-blur"></div>
         <div class="diff-card-body">
-          <p class="diff-card-title">Joinery & Media Walls</p>
-          <p class="diff-card-text">Custom joinery including media walls, wardrobes and bespoke display units.</p>
+          <p class="diff-card-title">{{ section.settings.diff_4_title }}</p>
+          <p class="diff-card-text">{{ section.settings.diff_4_text }}</p>
         </div>
       </div>
       <div class="diff-card">
         <div class="diff-card-img" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80')"></div>
         <div class="diff-card-blur"></div>
         <div class="diff-card-body">
-          <p class="diff-card-title">Curtains & Soft Furnishings</p>
-          <p class="diff-card-text">Full soft furnishing service — curtains, blinds and upholstery in premium fabrics.</p>
+          <p class="diff-card-title">{{ section.settings.diff_5_title }}</p>
+          <p class="diff-card-text">{{ section.settings.diff_5_text }}</p>
         </div>
       </div>
       <div class="diff-card">
         <div class="diff-card-img" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=700&q=80')"></div>
         <div class="diff-card-blur"></div>
         <div class="diff-card-body">
-          <p class="diff-card-title">One Supplier For Entire Projects</p>
-          <p class="diff-card-text">From furniture to joinery to marble — one trusted partner for the complete project.</p>
+          <p class="diff-card-title">{{ section.settings.diff_6_title }}</p>
+          <p class="diff-card-text">{{ section.settings.diff_6_text }}</p>
         </div>
       </div>
     </div>
@@ -1204,18 +1204,18 @@
   <div class="showroom-split">
     <div class="showroom-img" style="background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80')"></div>
     <div class="showroom-content">
-      <p class="showroom-title">Visit Our Dubai Hills Showroom</p>
-      <p class="showroom-text">Meet our design team, explore our curated material library and experience the craftsmanship behind our bespoke furniture and interiors.</p>
-      <p class="showroom-text">Open to trade partners by appointment or walk-in during showroom hours.</p>
-      <p class="showroom-address">Retail 1A, 2 Park Lane<br>Dubai Hills, Dubai<br>+971 4 431 0888</p>
-      <a href="#apply" class="btn-outline">Book A Consultation</a>
+      <p class="showroom-title">{{ section.settings.showroom_title }}</p>
+      <p class="showroom-text">{{ section.settings.showroom_text1 }}</p>
+      <p class="showroom-text">{{ section.settings.showroom_text2 }}</p>
+      <p class="showroom-address">{{ section.settings.showroom_address | newline_to_br }}</p>
+      <a href="{{ section.settings.showroom_btn_url }}" class="btn-outline">{{ section.settings.showroom_btn_text }}</a>
     </div>
   </div>
 
   <!-- FORM -->
   <div class="form-section" id="apply">
-    <p class="section-label">Get Started</p>
-    <p class="section-title">Apply For A Trade Account</p>
+    <p class="section-label">{{ section.settings.form_label }}</p>
+    <p class="section-title">{{ section.settings.form_title }}</p>
     <div class="form-wrap">
       {% form 'contact' %}
         {{ form.errors | default_errors }}
@@ -1276,7 +1276,7 @@
         </div>
         <div class="form-submit">
           <button type="submit" class="btn-dark">Apply For Trade Account</button>
-          <p class="form-note">Or call us directly: +971 4 431 0888</p>
+          <p class="form-note">{{ section.settings.form_note }}</p>
         </div>
       {% endform %}
     </div>
@@ -1286,10 +1286,10 @@
   <div class="closing">
     <div class="closing-bg"></div>
     <div class="closing-inner">
-      <h2 class="closing-title">Let's Discuss Your Next Project</h2>
+      <h2 class="closing-title">{{ section.settings.closing_title }}</h2>
       <div class="closing-btns">
-        <a href="#apply" class="btn-white">Book A Consultation</a>
-        <a href="#apply" class="btn-white">Apply For Trade Account</a>
+        <a href="{{ section.settings.closing_btn1_url }}" class="btn-white">{{ section.settings.closing_btn1_text }}</a>
+        <a href="{{ section.settings.closing_btn2_url }}" class="btn-white">{{ section.settings.closing_btn2_text }}</a>
       </div>
     </div>
   </div>
@@ -1323,6 +1323,168 @@
 {
   "name": "B2B Store Page",
   "tag": "div",
-  "class": "b2b-section-wrapper"
+  "class": "b2b-section-wrapper",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_label", "label": "Label", "default": "Trade & Partnership Programme" },
+    { "type": "text", "id": "hero_title_1", "label": "Title — Line 1", "default": "Your Trusted Partner For" },
+    { "type": "text", "id": "hero_title_2", "label": "Title — Line 2", "default": "Bespoke Luxury Interiors" },
+    { "type": "textarea", "id": "hero_subtitle", "label": "Subtitle", "default": "Supporting interior designers, architects, developers, real estate professionals and hospitality projects across the UAE and GCC." },
+    { "type": "text", "id": "hero_cta1_text", "label": "Button 1 Text", "default": "Apply For Trade Account" },
+    { "type": "text", "id": "hero_cta1_url", "label": "Button 1 URL", "default": "#apply" },
+    { "type": "text", "id": "hero_cta2_text", "label": "Button 2 Text", "default": "Book A Consultation" },
+    { "type": "text", "id": "hero_cta2_url", "label": "Button 2 URL", "default": "#apply" },
+
+    { "type": "header", "content": "Who We Work With" },
+    { "type": "text", "id": "who_label", "label": "Section Label", "default": "Our Partners" },
+    { "type": "text", "id": "who_title", "label": "Section Title", "default": "Who We Work With" },
+    { "type": "text", "id": "who_tab_1", "label": "Tab 1", "default": "Interior Designers" },
+    { "type": "text", "id": "who_tab_2", "label": "Tab 2", "default": "Architects" },
+    { "type": "text", "id": "who_tab_3", "label": "Tab 3", "default": "Property Developers" },
+    { "type": "text", "id": "who_tab_4", "label": "Tab 4", "default": "Hospitality" },
+    { "type": "text", "id": "who_tab_5", "label": "Tab 5", "default": "Real Estate" },
+    { "type": "text", "id": "who_tab_6", "label": "Tab 6", "default": "Holiday Home Operators" },
+
+    { "type": "header", "content": "Our Capabilities" },
+    { "type": "text", "id": "cap_label", "label": "Section Label", "default": "What We Do" },
+    { "type": "text", "id": "cap_title", "label": "Section Title", "default": "Our Capabilities" },
+    { "type": "text", "id": "cap_tile_1_title", "label": "Tile 1 Title", "default": "Bespoke Furniture" },
+    { "type": "text", "id": "cap_tile_2_title", "label": "Tile 2 Title", "default": "Bespoke Interiors" },
+    { "type": "text", "id": "cap_tile_3_title", "label": "Tile 3 Title", "default": "Interior Design Service" },
+    { "type": "text", "id": "cap_tile_4_title", "label": "Tile 4 Title", "default": "Media Walls & Joinery" },
+    { "type": "text", "id": "cap_tile_5_title", "label": "Tile 5 Title", "default": "Marble & Travertine" },
+    { "type": "text", "id": "cap_tile_6_title", "label": "Tile 6 Title", "default": "Full Home Furnishing" },
+
+    { "type": "header", "content": "Why Partner" },
+    { "type": "text", "id": "why_label", "label": "Section Label", "default": "Partnership" },
+    { "type": "text", "id": "why_title", "label": "Section Title", "default": "Why Partner With The Gallery Home" },
+    { "type": "text", "id": "why_row1_label", "label": "Row 1 — Label", "default": "Design & Craft" },
+    { "type": "text", "id": "why_row1_title_1", "label": "Row 1 — Title Line 1", "default": "Designed & Handcrafted" },
+    { "type": "text", "id": "why_row1_title_2", "label": "Row 1 — Title Line 2", "default": "In Dubai" },
+    { "type": "text", "id": "why_row1_bullet_1", "label": "Row 1 — Bullet 1", "default": "All pieces manufactured locally in our Dubai facility" },
+    { "type": "text", "id": "why_row1_bullet_2", "label": "Row 1 — Bullet 2", "default": "Full quality control from material to delivery" },
+    { "type": "text", "id": "why_row1_bullet_3", "label": "Row 1 — Bullet 3", "default": "Faster lead times than imported alternatives" },
+    { "type": "text", "id": "why_row2_label", "label": "Row 2 — Label", "default": "Project Support" },
+    { "type": "text", "id": "why_row2_title_1", "label": "Row 2 — Title Line 1", "default": "Dedicated Account" },
+    { "type": "text", "id": "why_row2_title_2", "label": "Row 2 — Title Line 2", "default": "Manager For Every Project" },
+    { "type": "text", "id": "why_row2_bullet_1", "label": "Row 2 — Bullet 1", "default": "One point of contact from brief to installation" },
+    { "type": "text", "id": "why_row2_bullet_2", "label": "Row 2 — Bullet 2", "default": "Access to our full material and fabric library" },
+    { "type": "text", "id": "why_row2_bullet_3", "label": "Row 2 — Bullet 3", "default": "Trade pricing and referral commission programme" },
+    { "type": "text", "id": "why_row3_label", "label": "Row 3 — Label", "default": "End To End" },
+    { "type": "text", "id": "why_row3_title_1", "label": "Row 3 — Title Line 1", "default": "White Glove Delivery" },
+    { "type": "text", "id": "why_row3_title_2", "label": "Row 3 — Title Line 2", "default": "& Installation" },
+    { "type": "text", "id": "why_row3_bullet_1", "label": "Row 3 — Bullet 1", "default": "Professional installation across Dubai, Abu Dhabi & GCC" },
+    { "type": "text", "id": "why_row3_bullet_2", "label": "Row 3 — Bullet 2", "default": "Coordinated around your project schedule" },
+    { "type": "text", "id": "why_row3_bullet_3", "label": "Row 3 — Bullet 3", "default": "Custom sizing and site measurements included" },
+
+    { "type": "header", "content": "Testimonials" },
+    { "type": "text", "id": "testi_label", "label": "Section Label", "default": "Client Testimonials" },
+    { "type": "text", "id": "testi_title", "label": "Section Title", "default": "What Our Trade Partners Say" },
+    { "type": "textarea", "id": "testi_1_quote", "label": "Testimonial 1 — Quote", "default": "The Gallery Home has become our go-to supplier for everything from bespoke joinery to full home furnishing packages. Their ability to deliver an entire villa project from one address saves us months of coordination." },
+    { "type": "text", "id": "testi_1_name", "label": "Testimonial 1 — Name", "default": "Sarah Al Mansoori" },
+    { "type": "text", "id": "testi_1_company", "label": "Testimonial 1 — Company", "default": "Principal Designer, SM Interiors — Dubai" },
+    { "type": "textarea", "id": "testi_2_quote", "label": "Testimonial 2 — Quote", "default": "Dubai-based manufacturing means we actually hit our install dates. We've used European suppliers before and the lead times were unworkable for our developer clients. The Gallery Home solves that completely." },
+    { "type": "text", "id": "testi_2_name", "label": "Testimonial 2 — Name", "default": "James Whitfield" },
+    { "type": "text", "id": "testi_2_company", "label": "Testimonial 2 — Company", "default": "Director, Whitfield Associates Architecture" },
+    { "type": "textarea", "id": "testi_3_quote", "label": "Testimonial 3 — Quote", "default": "From our first conversation to the final installation on a 24-apartment project, the level of communication was exceptional. Having a dedicated account manager who knows every detail of your project is invaluable." },
+    { "type": "text", "id": "testi_3_name", "label": "Testimonial 3 — Name", "default": "Lena Kowalski" },
+    { "type": "text", "id": "testi_3_company", "label": "Testimonial 3 — Company", "default": "Head of Interiors, Azizi Developments" },
+
+    { "type": "header", "content": "The Process" },
+    { "type": "text", "id": "process_label", "label": "Section Label", "default": "How It Works" },
+    { "type": "text", "id": "process_title", "label": "Section Title", "default": "The Process" },
+    { "type": "text", "id": "process_1_title", "label": "Step 1 — Title", "default": "Consultation" },
+    { "type": "textarea", "id": "process_1_text", "label": "Step 1 — Text", "default": "We meet to understand your project brief, timeline and requirements — in person at our Dubai Hills showroom or virtually." },
+    { "type": "text", "id": "process_2_title", "label": "Step 2 — Title", "default": "Design & Specification" },
+    { "type": "textarea", "id": "process_2_text", "label": "Step 2 — Text", "default": "Our team prepares detailed specifications, material samples and renders tailored to your project and client's vision." },
+    { "type": "text", "id": "process_3_title", "label": "Step 3 — Title", "default": "Production" },
+    { "type": "textarea", "id": "process_3_text", "label": "Step 3 — Text", "default": "All bespoke pieces are handcrafted in our Dubai facility with full quality oversight and regular progress updates." },
+    { "type": "text", "id": "process_4_title", "label": "Step 4 — Title", "default": "Delivery & Installation" },
+    { "type": "textarea", "id": "process_4_text", "label": "Step 4 — Text", "default": "White glove delivery and professional installation, coordinated around your project schedule across the UAE and GCC." },
+
+    { "type": "header", "content": "Mid-Page CTA" },
+    { "type": "text", "id": "mid_text", "label": "Heading", "default": "Ready to become a trade partner?" },
+    { "type": "text", "id": "mid_sub", "label": "Subtext", "default": "Join designers, architects and developers already working with The Gallery Home." },
+    { "type": "text", "id": "mid_btn_text", "label": "Button Text", "default": "Apply For Trade Account" },
+    { "type": "text", "id": "mid_btn_url", "label": "Button URL", "default": "#apply" },
+
+    { "type": "header", "content": "Partner Benefits" },
+    { "type": "text", "id": "benefits_label", "label": "Section Label", "default": "Trade Programme" },
+    { "type": "text", "id": "benefits_title", "label": "Section Title", "default": "Partner Benefits" },
+    { "type": "text", "id": "benefit_1_title", "label": "Benefit 1 — Title", "default": "Trade Pricing" },
+    { "type": "textarea", "id": "benefit_1_text", "label": "Benefit 1 — Text", "default": "Exclusive rates for registered trade partners on all products and services." },
+    { "type": "text", "id": "benefit_2_title", "label": "Benefit 2 — Title", "default": "Referral Commission" },
+    { "type": "textarea", "id": "benefit_2_text", "label": "Benefit 2 — Text", "default": "Earn commission on every referral through our structured partnership programme." },
+    { "type": "text", "id": "benefit_3_title", "label": "Benefit 3 — Title", "default": "Account Manager" },
+    { "type": "textarea", "id": "benefit_3_text", "label": "Benefit 3 — Text", "default": "A dedicated account manager for every trade partner from day one." },
+    { "type": "text", "id": "benefit_4_title", "label": "Benefit 4 — Title", "default": "Priority Production" },
+    { "type": "textarea", "id": "benefit_4_text", "label": "Benefit 4 — Text", "default": "Trade partners receive priority scheduling across all production lines." },
+    { "type": "text", "id": "benefit_5_title", "label": "Benefit 5 — Title", "default": "Custom Sizing" },
+    { "type": "textarea", "id": "benefit_5_text", "label": "Benefit 5 — Text", "default": "Every piece made to your exact project dimensions — no standard sizes." },
+    { "type": "text", "id": "benefit_6_title", "label": "Benefit 6 — Title", "default": "Site Measurements" },
+    { "type": "textarea", "id": "benefit_6_text", "label": "Benefit 6 — Text", "default": "Our team visits your project site to take precise measurements before production." },
+    { "type": "text", "id": "benefit_7_title", "label": "Benefit 7 — Title", "default": "GCC Project Support" },
+    { "type": "textarea", "id": "benefit_7_text", "label": "Benefit 7 — Text", "default": "Full delivery and installation support across UAE, Saudi Arabia and GCC." },
+    { "type": "text", "id": "benefit_8_title", "label": "Benefit 8 — Title", "default": "Material Samples" },
+    { "type": "textarea", "id": "benefit_8_text", "label": "Benefit 8 — Text", "default": "Access to our full library of material and fabric samples for client presentations." },
+
+    { "type": "header", "content": "Portfolio / Recent Projects" },
+    { "type": "text", "id": "portfolio_label", "label": "Section Label", "default": "Portfolio" },
+    { "type": "text", "id": "portfolio_title", "label": "Section Title", "default": "Recent Projects" },
+    { "type": "text", "id": "slide_1_type", "label": "Slide 1 — Category", "default": "Residential — Dubai Hills" },
+    { "type": "text", "id": "slide_1_name", "label": "Slide 1 — Project Name", "default": "Private Villa Fit-Out" },
+    { "type": "text", "id": "slide_1_services", "label": "Slide 1 — Services", "default": "Bespoke Furniture · Media Wall · Marble · Curtains" },
+    { "type": "text", "id": "slide_2_type", "label": "Slide 2 — Category", "default": "Hospitality — Downtown Dubai" },
+    { "type": "text", "id": "slide_2_name", "label": "Slide 2 — Project Name", "default": "Boutique Hotel Interiors" },
+    { "type": "text", "id": "slide_2_services", "label": "Slide 2 — Services", "default": "Full Furnishing · Joinery · Soft Furnishings" },
+    { "type": "text", "id": "slide_3_type", "label": "Slide 3 — Category", "default": "Developer — Palm Jumeirah" },
+    { "type": "text", "id": "slide_3_name", "label": "Slide 3 — Project Name", "default": "Luxury Apartment Package" },
+    { "type": "text", "id": "slide_3_services", "label": "Slide 3 — Services", "default": "Wardrobes · Bespoke Furniture · Feature Walls" },
+    { "type": "text", "id": "slide_4_type", "label": "Slide 4 — Category", "default": "Residential — Emirates Hills" },
+    { "type": "text", "id": "slide_4_name", "label": "Slide 4 — Project Name", "default": "Full Home Furnishing" },
+    { "type": "text", "id": "slide_4_services", "label": "Slide 4 — Services", "default": "Furniture · Marble · Curtains · Joinery" },
+    { "type": "text", "id": "slide_5_type", "label": "Slide 5 — Category", "default": "Commercial — Business Bay" },
+    { "type": "text", "id": "slide_5_name", "label": "Slide 5 — Project Name", "default": "Office & Reception Fit-Out" },
+    { "type": "text", "id": "slide_5_services", "label": "Slide 5 — Services", "default": "Bespoke Joinery · Upholstery · Stone" },
+    { "type": "text", "id": "slide_6_type", "label": "Slide 6 — Category", "default": "Developer — Downtown Dubai" },
+    { "type": "text", "id": "slide_6_name", "label": "Slide 6 — Project Name", "default": "24-Unit Apartment Package" },
+    { "type": "text", "id": "slide_6_services", "label": "Slide 6 — Services", "default": "Furniture · Wardrobes · Marble Feature Walls" },
+
+    { "type": "header", "content": "Why Designers Choose Us" },
+    { "type": "text", "id": "diff_label", "label": "Section Label", "default": "Why Us" },
+    { "type": "text", "id": "diff_title", "label": "Section Title", "default": "Why Designers Choose The Gallery Home" },
+    { "type": "text", "id": "diff_1_title", "label": "Card 1 — Title", "default": "UAE Manufacturing" },
+    { "type": "textarea", "id": "diff_1_text", "label": "Card 1 — Text", "default": "Everything designed and handcrafted in Dubai — full quality control, no long imports." },
+    { "type": "text", "id": "diff_2_title", "label": "Card 2 — Title", "default": "Custom Dimensions" },
+    { "type": "textarea", "id": "diff_2_text", "label": "Card 2 — Text", "default": "Every piece made to exact specifications — no compromises on size or proportion." },
+    { "type": "text", "id": "diff_3_title", "label": "Card 3 — Title", "default": "Bespoke Marble & Travertine" },
+    { "type": "textarea", "id": "diff_3_text", "label": "Card 3 — Text", "default": "In-house stone fabrication across a curated library of natural marbles and travertines." },
+    { "type": "text", "id": "diff_4_title", "label": "Card 4 — Title", "default": "Joinery & Media Walls" },
+    { "type": "textarea", "id": "diff_4_text", "label": "Card 4 — Text", "default": "Custom joinery including media walls, wardrobes and bespoke display units." },
+    { "type": "text", "id": "diff_5_title", "label": "Card 5 — Title", "default": "Curtains & Soft Furnishings" },
+    { "type": "textarea", "id": "diff_5_text", "label": "Card 5 — Text", "default": "Full soft furnishing service — curtains, blinds and upholstery in premium fabrics." },
+    { "type": "text", "id": "diff_6_title", "label": "Card 6 — Title", "default": "One Supplier For Entire Projects" },
+    { "type": "textarea", "id": "diff_6_text", "label": "Card 6 — Text", "default": "From furniture to joinery to marble — one trusted partner for the complete project." },
+
+    { "type": "header", "content": "Showroom" },
+    { "type": "text", "id": "showroom_title", "label": "Title", "default": "Visit Our Dubai Hills Showroom" },
+    { "type": "textarea", "id": "showroom_text1", "label": "Text 1", "default": "Meet our design team, explore our curated material library and experience the craftsmanship behind our bespoke furniture and interiors." },
+    { "type": "textarea", "id": "showroom_text2", "label": "Text 2", "default": "Open to trade partners by appointment or walk-in during showroom hours." },
+    { "type": "textarea", "id": "showroom_address", "label": "Address (use Enter for line breaks)", "default": "Retail 1A, 2 Park Lane\nDubai Hills, Dubai\n+971 4 431 0888" },
+    { "type": "text", "id": "showroom_btn_text", "label": "Button Text", "default": "Book A Consultation" },
+    { "type": "text", "id": "showroom_btn_url", "label": "Button URL", "default": "#apply" },
+
+    { "type": "header", "content": "Application Form" },
+    { "type": "text", "id": "form_label", "label": "Section Label", "default": "Get Started" },
+    { "type": "text", "id": "form_title", "label": "Section Title", "default": "Apply For A Trade Account" },
+    { "type": "text", "id": "form_note", "label": "Note Below Button", "default": "Or call us directly: +971 4 431 0888" },
+
+    { "type": "header", "content": "Closing CTA" },
+    { "type": "text", "id": "closing_title", "label": "Title", "default": "Let's Discuss Your Next Project" },
+    { "type": "text", "id": "closing_btn1_text", "label": "Button 1 Text", "default": "Book A Consultation" },
+    { "type": "text", "id": "closing_btn1_url", "label": "Button 1 URL", "default": "#apply" },
+    { "type": "text", "id": "closing_btn2_text", "label": "Button 2 Text", "default": "Apply For Trade Account" },
+    { "type": "text", "id": "closing_btn2_url", "label": "Button 2 URL", "default": "#apply" }
+  ]
 }
 {% endschema %}
