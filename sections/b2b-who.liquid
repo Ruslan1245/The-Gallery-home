@@ -1,0 +1,74 @@
+{% render 'b2b-styles' %}
+<style>
+.b2b-page .who-section {
+  padding: 80px;
+  border-bottom: 1px solid var(--border);
+}
+.b2b-page .who-tabs {
+  display: flex;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.b2b-page .who-tab {
+  flex: 1;
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-right: 1px solid var(--border);
+  font-weight: 500;
+}
+.b2b-page .who-tab:last-child { border-right: none; }
+.b2b-page .who-tab-num {
+  font-size: 24px;
+  font-weight: 300;
+  opacity: 0.15;
+  display: block;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .b2b-page .who-section { padding: 48px 24px; }
+  .b2b-page .who-tabs { flex-wrap: wrap; }
+  .b2b-page .who-tab { flex: 0 0 50%; border-bottom: 1px solid var(--border); }
+  .b2b-page .who-tab:nth-child(even) { border-right: none; }
+  .b2b-page .who-tab:nth-child(odd) { border-right: 1px solid var(--border); }
+}
+@media (max-width: 320px) {
+  .b2b-page .who-tabs { flex-direction: column; }
+  .b2b-page .who-tab { flex: 0 0 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .b2b-page .who-tab:last-child { border-bottom: none; }
+}
+</style>
+
+<div class="who-section">
+  <p class="section-label">{{ section.settings.who_label }}</p>
+  <p class="section-title">{{ section.settings.who_title }}</p>
+  <div class="who-tabs">
+    <div class="who-tab"><span class="who-tab-num">01</span>{{ section.settings.who_tab_1 }}</div>
+    <div class="who-tab"><span class="who-tab-num">02</span>{{ section.settings.who_tab_2 }}</div>
+    <div class="who-tab"><span class="who-tab-num">03</span>{{ section.settings.who_tab_3 }}</div>
+    <div class="who-tab"><span class="who-tab-num">04</span>{{ section.settings.who_tab_4 }}</div>
+    <div class="who-tab"><span class="who-tab-num">05</span>{{ section.settings.who_tab_5 }}</div>
+    <div class="who-tab"><span class="who-tab-num">06</span>{{ section.settings.who_tab_6 }}</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B — Who We Work With",
+  "tag": "div",
+  "class": "b2b-page",
+  "settings": [
+    { "type": "text", "id": "who_label", "label": "Section Label", "default": "Our Partners" },
+    { "type": "text", "id": "who_title", "label": "Section Title", "default": "Who We Work With" },
+    { "type": "text", "id": "who_tab_1", "label": "Tab 1", "default": "Interior Designers" },
+    { "type": "text", "id": "who_tab_2", "label": "Tab 2", "default": "Architects" },
+    { "type": "text", "id": "who_tab_3", "label": "Tab 3", "default": "Property Developers" },
+    { "type": "text", "id": "who_tab_4", "label": "Tab 4", "default": "Hospitality" },
+    { "type": "text", "id": "who_tab_5", "label": "Tab 5", "default": "Real Estate" },
+    { "type": "text", "id": "who_tab_6", "label": "Tab 6", "default": "Holiday Home Operators" }
+  ],
+  "presets": [{ "name": "B2B — Who We Work With" }]
+}
+{% endschema %}

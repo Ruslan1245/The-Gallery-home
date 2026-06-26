@@ -1,0 +1,202 @@
+{% render 'b2b-styles' %}
+<style>
+.b2b-page .portfolio-section {
+  padding: 80px;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--border);
+}
+.b2b-page .slider-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.b2b-page .slider-track {
+  display: flex;
+  gap: 4px;
+  transition: transform 0.5s ease;
+}
+.b2b-page .slide {
+  min-width: calc(50% - 2px);
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.b2b-page .slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%);
+}
+.b2b-page .slide-info {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
+}
+.b2b-page .slide-type {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
+}
+.b2b-page .slide-name {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.b2b-page .slide-services {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+}
+.b2b-page .slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+.b2b-page .slider-arrow:hover { background: rgba(255,255,255,0.3); }
+.b2b-page .slider-arrow svg { width: 16px; height: 16px; stroke: #fff; fill: none; }
+.b2b-page .slider-arrow.left { left: 16px; }
+.b2b-page .slider-arrow.right { right: 16px; }
+@media (max-width: 768px) {
+  .b2b-page .portfolio-section { padding: 48px 24px 0; }
+  .b2b-page .slide { min-width: 90%; }
+  .b2b-page .slider-arrow.left { left: 8px; }
+  .b2b-page .slider-arrow.right { right: 8px; }
+}
+</style>
+
+<div class="portfolio-section">
+  <p class="section-label">{{ section.settings.portfolio_label }}</p>
+  <p class="section-title">{{ section.settings.portfolio_title }}</p>
+  <div class="slider-wrap">
+    <button class="slider-arrow left" onclick="b2bSlide(-1)">
+      <svg viewBox="0 0 24 24" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="slider-arrow right" onclick="b2bSlide(1)">
+      <svg viewBox="0 0 24 24" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="slider-track" id="b2bSliderTrack">
+      <div class="slide" style="background-image:url('{% if section.settings.slide_1_image != blank %}{{ section.settings.slide_1_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=900&q=80{% endif %}')">
+        <div class="slide-overlay"></div>
+        <div class="slide-info">
+          <p class="slide-type">{{ section.settings.slide_1_type }}</p>
+          <p class="slide-name">{{ section.settings.slide_1_name }}</p>
+          <p class="slide-services">{{ section.settings.slide_1_services }}</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('{% if section.settings.slide_2_image != blank %}{{ section.settings.slide_2_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80{% endif %}')">
+        <div class="slide-overlay"></div>
+        <div class="slide-info">
+          <p class="slide-type">{{ section.settings.slide_2_type }}</p>
+          <p class="slide-name">{{ section.settings.slide_2_name }}</p>
+          <p class="slide-services">{{ section.settings.slide_2_services }}</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('{% if section.settings.slide_3_image != blank %}{{ section.settings.slide_3_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1505693314120-0d443867891c?w=900&q=80{% endif %}')">
+        <div class="slide-overlay"></div>
+        <div class="slide-info">
+          <p class="slide-type">{{ section.settings.slide_3_type }}</p>
+          <p class="slide-name">{{ section.settings.slide_3_name }}</p>
+          <p class="slide-services">{{ section.settings.slide_3_services }}</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('{% if section.settings.slide_4_image != blank %}{{ section.settings.slide_4_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80{% endif %}')">
+        <div class="slide-overlay"></div>
+        <div class="slide-info">
+          <p class="slide-type">{{ section.settings.slide_4_type }}</p>
+          <p class="slide-name">{{ section.settings.slide_4_name }}</p>
+          <p class="slide-services">{{ section.settings.slide_4_services }}</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('{% if section.settings.slide_5_image != blank %}{{ section.settings.slide_5_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80{% endif %}')">
+        <div class="slide-overlay"></div>
+        <div class="slide-info">
+          <p class="slide-type">{{ section.settings.slide_5_type }}</p>
+          <p class="slide-name">{{ section.settings.slide_5_name }}</p>
+          <p class="slide-services">{{ section.settings.slide_5_services }}</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('{% if section.settings.slide_6_image != blank %}{{ section.settings.slide_6_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80{% endif %}')">
+        <div class="slide-overlay"></div>
+        <div class="slide-info">
+          <p class="slide-type">{{ section.settings.slide_6_type }}</p>
+          <p class="slide-name">{{ section.settings.slide_6_name }}</p>
+          <p class="slide-services">{{ section.settings.slide_6_services }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var b2bCurrent = 0;
+  function b2bSlide(dir) {
+    var track = document.getElementById('b2bSliderTrack');
+    var slides = track.querySelectorAll('.slide');
+    var visibleCount = window.innerWidth <= 768 ? 1 : 2;
+    var maxPosition = slides.length - visibleCount;
+    b2bCurrent = Math.max(0, Math.min(b2bCurrent + dir, maxPosition));
+    var slideWidth = slides[0].offsetWidth + 4;
+    track.style.transform = 'translateX(-' + (b2bCurrent * slideWidth) + 'px)';
+  }
+</script>
+
+{% schema %}
+{
+  "name": "B2B — Portfolio",
+  "tag": "div",
+  "class": "b2b-page",
+  "settings": [
+    { "type": "text", "id": "portfolio_label", "label": "Section Label", "default": "Portfolio" },
+    { "type": "text", "id": "portfolio_title", "label": "Section Title", "default": "Recent Projects" },
+    { "type": "header", "content": "Slide 1" },
+    { "type": "image_picker", "id": "slide_1_image", "label": "Image" },
+    { "type": "text", "id": "slide_1_type", "label": "Category", "default": "Residential — Dubai Hills" },
+    { "type": "text", "id": "slide_1_name", "label": "Project Name", "default": "Private Villa Fit-Out" },
+    { "type": "text", "id": "slide_1_services", "label": "Services", "default": "Bespoke Furniture · Media Wall · Marble · Curtains" },
+    { "type": "header", "content": "Slide 2" },
+    { "type": "image_picker", "id": "slide_2_image", "label": "Image" },
+    { "type": "text", "id": "slide_2_type", "label": "Category", "default": "Hospitality — Downtown Dubai" },
+    { "type": "text", "id": "slide_2_name", "label": "Project Name", "default": "Boutique Hotel Interiors" },
+    { "type": "text", "id": "slide_2_services", "label": "Services", "default": "Full Furnishing · Joinery · Soft Furnishings" },
+    { "type": "header", "content": "Slide 3" },
+    { "type": "image_picker", "id": "slide_3_image", "label": "Image" },
+    { "type": "text", "id": "slide_3_type", "label": "Category", "default": "Developer — Palm Jumeirah" },
+    { "type": "text", "id": "slide_3_name", "label": "Project Name", "default": "Luxury Apartment Package" },
+    { "type": "text", "id": "slide_3_services", "label": "Services", "default": "Wardrobes · Bespoke Furniture · Feature Walls" },
+    { "type": "header", "content": "Slide 4" },
+    { "type": "image_picker", "id": "slide_4_image", "label": "Image" },
+    { "type": "text", "id": "slide_4_type", "label": "Category", "default": "Residential — Emirates Hills" },
+    { "type": "text", "id": "slide_4_name", "label": "Project Name", "default": "Full Home Furnishing" },
+    { "type": "text", "id": "slide_4_services", "label": "Services", "default": "Furniture · Marble · Curtains · Joinery" },
+    { "type": "header", "content": "Slide 5" },
+    { "type": "image_picker", "id": "slide_5_image", "label": "Image" },
+    { "type": "text", "id": "slide_5_type", "label": "Category", "default": "Commercial — Business Bay" },
+    { "type": "text", "id": "slide_5_name", "label": "Project Name", "default": "Office & Reception Fit-Out" },
+    { "type": "text", "id": "slide_5_services", "label": "Services", "default": "Bespoke Joinery · Upholstery · Stone" },
+    { "type": "header", "content": "Slide 6" },
+    { "type": "image_picker", "id": "slide_6_image", "label": "Image" },
+    { "type": "text", "id": "slide_6_type", "label": "Category", "default": "Developer — Downtown Dubai" },
+    { "type": "text", "id": "slide_6_name", "label": "Project Name", "default": "24-Unit Apartment Package" },
+    { "type": "text", "id": "slide_6_services", "label": "Services", "default": "Furniture · Wardrobes · Marble Feature Walls" }
+  ],
+  "presets": [{ "name": "B2B — Portfolio" }]
+}
+{% endschema %}

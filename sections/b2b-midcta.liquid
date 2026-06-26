@@ -1,0 +1,70 @@
+{% render 'b2b-styles' %}
+<style>
+.b2b-page .midpage-cta {
+  background: var(--dark);
+  padding: 60px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-bottom: 1px solid #333;
+}
+.b2b-page .midpage-cta-text {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.b2b-page .midpage-cta-sub {
+  color: rgba(255,255,255,0.45);
+  font-size: 15px;
+  margin-top: 8px;
+  font-weight: 300;
+}
+.b2b-page .btn-cta-white {
+  display: inline-block;
+  background: #fff;
+  color: var(--dark);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.b2b-page .btn-cta-white:hover { opacity: 0.85; }
+@media (max-width: 768px) {
+  .b2b-page .midpage-cta { flex-direction: column; align-items: flex-start; padding: 40px 24px; gap: 24px; }
+}
+@media (max-width: 425px) {
+  .b2b-page .midpage-cta { align-items: center; }
+  .b2b-page .midpage-cta-text { text-align: center; }
+  .b2b-page .midpage-cta-sub { text-align: center; }
+}
+</style>
+
+<div class="midpage-cta">
+  <div>
+    <p class="midpage-cta-text">{{ section.settings.mid_text }}</p>
+    <p class="midpage-cta-sub">{{ section.settings.mid_sub }}</p>
+  </div>
+  <a href="{{ section.settings.mid_btn_url }}" class="btn-cta-white">{{ section.settings.mid_btn_text }}</a>
+</div>
+
+{% schema %}
+{
+  "name": "B2B — Mid-Page CTA",
+  "tag": "div",
+  "class": "b2b-page",
+  "settings": [
+    { "type": "text", "id": "mid_text", "label": "Heading", "default": "Ready to become a trade partner?" },
+    { "type": "text", "id": "mid_sub", "label": "Subtext", "default": "Join designers, architects and developers already working with The Gallery Home." },
+    { "type": "text", "id": "mid_btn_text", "label": "Button Text", "default": "Apply For Trade Account" },
+    { "type": "text", "id": "mid_btn_url", "label": "Button URL", "default": "#apply" }
+  ],
+  "presets": [{ "name": "B2B — Mid-Page CTA" }]
+}
+{% endschema %}

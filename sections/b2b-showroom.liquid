@@ -1,0 +1,89 @@
+{% render 'b2b-styles' %}
+<style>
+.b2b-page .showroom-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  border-bottom: 1px solid var(--border);
+}
+.b2b-page .showroom-img {
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+.b2b-page .showroom-content {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg);
+}
+.b2b-page .showroom-title {
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.b2b-page .showroom-text {
+  font-size: 17px;
+  line-height: 1.8;
+  opacity: 0.7;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+.b2b-page .showroom-address {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+.b2b-page .btn-outline {
+  display: inline-block;
+  border: 1px solid var(--dark);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  text-decoration: none;
+  color: var(--dark);
+  transition: background 0.2s, color 0.2s;
+}
+.b2b-page .btn-outline:hover { background: var(--dark); color: #fff; }
+@media (max-width: 768px) {
+  .b2b-page .showroom-split { grid-template-columns: 1fr; }
+  .b2b-page .showroom-img { min-height: 300px; }
+  .b2b-page .showroom-content { padding: 40px 24px; }
+}
+</style>
+
+<div class="showroom-split">
+  <div class="showroom-img" style="background-image:url('{% if section.settings.showroom_image != blank %}{{ section.settings.showroom_image | image_url: width: 1200 }}{% else %}https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80{% endif %}')"></div>
+  <div class="showroom-content">
+    <p class="showroom-title">{{ section.settings.showroom_title }}</p>
+    <p class="showroom-text">{{ section.settings.showroom_text1 }}</p>
+    <p class="showroom-text">{{ section.settings.showroom_text2 }}</p>
+    <p class="showroom-address">{{ section.settings.showroom_address | newline_to_br }}</p>
+    <a href="{{ section.settings.showroom_btn_url }}" class="btn-outline">{{ section.settings.showroom_btn_text }}</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B — Showroom",
+  "tag": "div",
+  "class": "b2b-page",
+  "settings": [
+    { "type": "image_picker", "id": "showroom_image", "label": "Showroom Image" },
+    { "type": "text", "id": "showroom_title", "label": "Title", "default": "Visit Our Dubai Hills Showroom" },
+    { "type": "textarea", "id": "showroom_text1", "label": "Text 1", "default": "Meet our design team, explore our curated material library and experience the craftsmanship behind our bespoke furniture and interiors." },
+    { "type": "textarea", "id": "showroom_text2", "label": "Text 2", "default": "Open to trade partners by appointment or walk-in during showroom hours." },
+    { "type": "textarea", "id": "showroom_address", "label": "Address (Enter = new line)", "default": "Retail 1A, 2 Park Lane\nDubai Hills, Dubai\n+971 4 431 0888" },
+    { "type": "text", "id": "showroom_btn_text", "label": "Button Text", "default": "Book A Consultation" },
+    { "type": "text", "id": "showroom_btn_url", "label": "Button URL", "default": "#apply" }
+  ],
+  "presets": [{ "name": "B2B — Showroom" }]
+}
+{% endschema %}

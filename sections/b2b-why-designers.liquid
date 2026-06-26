@@ -1,0 +1,152 @@
+{% render 'b2b-styles' %}
+<style>
+.b2b-page .diff-section {
+  padding: 80px;
+  border-bottom: 1px solid var(--border);
+}
+.b2b-page .diff-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.b2b-page .diff-card {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+}
+.b2b-page .diff-card-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.b2b-page .diff-card-blur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+}
+.b2b-page .diff-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px 28px;
+}
+.b2b-page .diff-card-title {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 500;
+}
+.b2b-page .diff-card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .b2b-page .diff-section { padding: 48px 24px; }
+  .b2b-page .diff-v2 { grid-template-columns: 1fr 1fr; }
+  .b2b-page .diff-card { height: 280px; }
+}
+@media (max-width: 375px) {
+  .b2b-page .diff-v2 { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="diff-section">
+  <p class="section-label">{{ section.settings.diff_label }}</p>
+  <p class="section-title">{{ section.settings.diff_title }}</p>
+  <div class="diff-v2">
+    <div class="diff-card">
+      <div class="diff-card-img" style="background-image:url('{% if section.settings.diff_1_image != blank %}{{ section.settings.diff_1_image | image_url: width: 700 }}{% else %}https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=80{% endif %}')"></div>
+      <div class="diff-card-blur"></div>
+      <div class="diff-card-body">
+        <p class="diff-card-title">{{ section.settings.diff_1_title }}</p>
+        <p class="diff-card-text">{{ section.settings.diff_1_text }}</p>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img" style="background-image:url('{% if section.settings.diff_2_image != blank %}{{ section.settings.diff_2_image | image_url: width: 700 }}{% else %}https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80{% endif %}')"></div>
+      <div class="diff-card-blur"></div>
+      <div class="diff-card-body">
+        <p class="diff-card-title">{{ section.settings.diff_2_title }}</p>
+        <p class="diff-card-text">{{ section.settings.diff_2_text }}</p>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img" style="background-image:url('{% if section.settings.diff_3_image != blank %}{{ section.settings.diff_3_image | image_url: width: 700 }}{% else %}https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=80{% endif %}')"></div>
+      <div class="diff-card-blur"></div>
+      <div class="diff-card-body">
+        <p class="diff-card-title">{{ section.settings.diff_3_title }}</p>
+        <p class="diff-card-text">{{ section.settings.diff_3_text }}</p>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img" style="background-image:url('{% if section.settings.diff_4_image != blank %}{{ section.settings.diff_4_image | image_url: width: 700 }}{% else %}https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=700&q=80{% endif %}')"></div>
+      <div class="diff-card-blur"></div>
+      <div class="diff-card-body">
+        <p class="diff-card-title">{{ section.settings.diff_4_title }}</p>
+        <p class="diff-card-text">{{ section.settings.diff_4_text }}</p>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img" style="background-image:url('{% if section.settings.diff_5_image != blank %}{{ section.settings.diff_5_image | image_url: width: 700 }}{% else %}https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80{% endif %}')"></div>
+      <div class="diff-card-blur"></div>
+      <div class="diff-card-body">
+        <p class="diff-card-title">{{ section.settings.diff_5_title }}</p>
+        <p class="diff-card-text">{{ section.settings.diff_5_text }}</p>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img" style="background-image:url('{% if section.settings.diff_6_image != blank %}{{ section.settings.diff_6_image | image_url: width: 700 }}{% else %}https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=700&q=80{% endif %}')"></div>
+      <div class="diff-card-blur"></div>
+      <div class="diff-card-body">
+        <p class="diff-card-title">{{ section.settings.diff_6_title }}</p>
+        <p class="diff-card-text">{{ section.settings.diff_6_text }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B — Why Designers Choose Us",
+  "tag": "div",
+  "class": "b2b-page",
+  "settings": [
+    { "type": "text", "id": "diff_label", "label": "Section Label", "default": "Why Us" },
+    { "type": "text", "id": "diff_title", "label": "Section Title", "default": "Why Designers Choose The Gallery Home" },
+    { "type": "header", "content": "Card 1" },
+    { "type": "image_picker", "id": "diff_1_image", "label": "Image" },
+    { "type": "text", "id": "diff_1_title", "label": "Title", "default": "UAE Manufacturing" },
+    { "type": "textarea", "id": "diff_1_text", "label": "Text", "default": "Everything designed and handcrafted in Dubai — full quality control, no long imports." },
+    { "type": "header", "content": "Card 2" },
+    { "type": "image_picker", "id": "diff_2_image", "label": "Image" },
+    { "type": "text", "id": "diff_2_title", "label": "Title", "default": "Custom Dimensions" },
+    { "type": "textarea", "id": "diff_2_text", "label": "Text", "default": "Every piece made to exact specifications — no compromises on size or proportion." },
+    { "type": "header", "content": "Card 3" },
+    { "type": "image_picker", "id": "diff_3_image", "label": "Image" },
+    { "type": "text", "id": "diff_3_title", "label": "Title", "default": "Bespoke Marble & Travertine" },
+    { "type": "textarea", "id": "diff_3_text", "label": "Text", "default": "In-house stone fabrication across a curated library of natural marbles and travertines." },
+    { "type": "header", "content": "Card 4" },
+    { "type": "image_picker", "id": "diff_4_image", "label": "Image" },
+    { "type": "text", "id": "diff_4_title", "label": "Title", "default": "Joinery & Media Walls" },
+    { "type": "textarea", "id": "diff_4_text", "label": "Text", "default": "Custom joinery including media walls, wardrobes and bespoke display units." },
+    { "type": "header", "content": "Card 5" },
+    { "type": "image_picker", "id": "diff_5_image", "label": "Image" },
+    { "type": "text", "id": "diff_5_title", "label": "Title", "default": "Curtains & Soft Furnishings" },
+    { "type": "textarea", "id": "diff_5_text", "label": "Text", "default": "Full soft furnishing service — curtains, blinds and upholstery in premium fabrics." },
+    { "type": "header", "content": "Card 6" },
+    { "type": "image_picker", "id": "diff_6_image", "label": "Image" },
+    { "type": "text", "id": "diff_6_title", "label": "Title", "default": "One Supplier For Entire Projects" },
+    { "type": "textarea", "id": "diff_6_text", "label": "Text", "default": "From furniture to joinery to marble — one trusted partner for the complete project." }
+  ],
+  "presets": [{ "name": "B2B — Why Designers Choose Us" }]
+}
+{% endschema %}

@@ -1,9 +1,71 @@
 {
   "sections": {
-    "b2b_store_main": {
-      "type": "b2b-store",
+    "b2b_hero": {
+      "type": "b2b-hero",
+      "settings": {}
+    },
+    "b2b_who": {
+      "type": "b2b-who",
+      "settings": {}
+    },
+    "b2b_capabilities": {
+      "type": "b2b-capabilities",
+      "settings": {}
+    },
+    "b2b_why_partner": {
+      "type": "b2b-why-partner",
+      "settings": {}
+    },
+    "b2b_testimonials": {
+      "type": "b2b-testimonials",
+      "settings": {}
+    },
+    "b2b_process": {
+      "type": "b2b-process",
+      "settings": {}
+    },
+    "b2b_midcta": {
+      "type": "b2b-midcta",
+      "settings": {}
+    },
+    "b2b_benefits": {
+      "type": "b2b-benefits",
+      "settings": {}
+    },
+    "b2b_portfolio": {
+      "type": "b2b-portfolio",
+      "settings": {}
+    },
+    "b2b_why_designers": {
+      "type": "b2b-why-designers",
+      "settings": {}
+    },
+    "b2b_showroom": {
+      "type": "b2b-showroom",
+      "settings": {}
+    },
+    "b2b_form": {
+      "type": "b2b-form",
+      "settings": {}
+    },
+    "b2b_closing": {
+      "type": "b2b-closing",
       "settings": {}
     }
   },
-  "order": ["b2b_store_main"]
+  "order": [
+    "b2b_hero",
+    "b2b_who",
+    "b2b_capabilities",
+    "b2b_why_partner",
+    "b2b_testimonials",
+    "b2b_process",
+    "b2b_midcta",
+    "b2b_benefits",
+    "b2b_portfolio",
+    "b2b_why_designers",
+    "b2b_showroom",
+    "b2b_form",
+    "b2b_closing"
+  ]
 }

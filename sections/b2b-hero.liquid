@@ -1,0 +1,117 @@
+{% render 'b2b-styles' %}
+<style>
+.b2b-page .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.b2b-page .hero-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.b2b-page .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.b2b-page .hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 0 40px;
+}
+.b2b-page .hero-label {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  opacity: 0.8;
+}
+.b2b-page .hero-title {
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 28px;
+}
+.b2b-page .hero-sub {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 40px;
+  opacity: 0.85;
+}
+.b2b-page .hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.b2b-page .hero-cta a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 2px;
+}
+.b2b-page .hero-cta .divider { opacity: 0.4; }
+@media (max-width: 768px) {
+  .b2b-page .hero { height: auto; min-height: 400px; }
+  .b2b-page .hero-content { padding: 0 24px; }
+  .b2b-page .hero-title { font-size: 28px; }
+  .b2b-page .hero-sub { font-size: 13px; }
+  .b2b-page .hero-cta { flex-direction: column; gap: 10px; }
+}
+@media (max-width: 425px) {
+  .b2b-page .hero-cta { gap: 4px; }
+  .b2b-page .hero-cta .divider { display: none; }
+  .b2b-page .hero-sub { margin-bottom: 20px; }
+}
+</style>
+
+<div class="hero">
+  <div class="hero-img" style="background-image:url('{% if section.settings.hero_image != blank %}{{ section.settings.hero_image | image_url: width: 1600 }}{% else %}https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80{% endif %}')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-label">{{ section.settings.hero_label }}</p>
+    <h1 class="hero-title">{{ section.settings.hero_title_1 }}<br>{{ section.settings.hero_title_2 }}</h1>
+    <p class="hero-sub">{{ section.settings.hero_subtitle }}</p>
+    <div class="hero-cta">
+      <a href="{{ section.settings.hero_cta1_url }}">{{ section.settings.hero_cta1_text }}</a>
+      <span class="divider">|</span>
+      <a href="{{ section.settings.hero_cta2_url }}">{{ section.settings.hero_cta2_text }}</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B — Hero",
+  "tag": "div",
+  "class": "b2b-page",
+  "settings": [
+    { "type": "image_picker", "id": "hero_image", "label": "Background Image" },
+    { "type": "text", "id": "hero_label", "label": "Label", "default": "Trade & Partnership Programme" },
+    { "type": "text", "id": "hero_title_1", "label": "Title — Line 1", "default": "Your Trusted Partner For" },
+    { "type": "text", "id": "hero_title_2", "label": "Title — Line 2", "default": "Bespoke Luxury Interiors" },
+    { "type": "textarea", "id": "hero_subtitle", "label": "Subtitle", "default": "Supporting interior designers, architects, developers, real estate professionals and hospitality projects across the UAE and GCC." },
+    { "type": "text", "id": "hero_cta1_text", "label": "Button 1 Text", "default": "Apply For Trade Account" },
+    { "type": "text", "id": "hero_cta1_url", "label": "Button 1 URL", "default": "#apply" },
+    { "type": "text", "id": "hero_cta2_text", "label": "Button 2 Text", "default": "Book A Consultation" },
+    { "type": "text", "id": "hero_cta2_url", "label": "Button 2 URL", "default": "#apply" }
+  ],
+  "presets": [{ "name": "B2B — Hero" }]
+}
+{% endschema %}

@@ -1,0 +1,159 @@
+{% render 'b2b-styles' %}
+<style>
+.b2b-page .why-section { border-bottom: 1px solid var(--border); }
+.b2b-page .why-header {
+  padding: 80px 80px 0;
+  text-align: center;
+}
+.b2b-page .why-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+}
+.b2b-page .why-row.reverse { direction: rtl; }
+.b2b-page .why-row.reverse > * { direction: ltr; }
+.b2b-page .why-img {
+  background-size: cover;
+  background-position: center;
+  min-height: 420px;
+}
+.b2b-page .why-content {
+  padding: 70px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg);
+}
+.b2b-page .why-label {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 16px;
+}
+.b2b-page .why-title {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.b2b-page .why-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.b2b-page .why-list li {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.7;
+  padding-left: 20px;
+  position: relative;
+  font-weight: 300;
+}
+.b2b-page .why-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: 0.4;
+}
+.b2b-page .why-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .b2b-page .why-header { padding: 48px 24px 0; }
+  .b2b-page .why-row { grid-template-columns: 1fr; }
+  .b2b-page .why-row.reverse { direction: ltr; }
+  .b2b-page .why-img { min-height: 260px; }
+  .b2b-page .why-content { padding: 40px 24px; }
+}
+</style>
+
+<div class="why-section">
+  <div class="why-header">
+    <p class="section-label">{{ section.settings.why_label }}</p>
+    <p class="section-title">{{ section.settings.why_title }}</p>
+  </div>
+
+  <div class="why-row">
+    <div class="why-content">
+      <p class="why-label">{{ section.settings.why_row1_label }}</p>
+      <p class="why-title">{{ section.settings.why_row1_title_1 }}<br>{{ section.settings.why_row1_title_2 }}</p>
+      <ul class="why-list">
+        <li>{{ section.settings.why_row1_bullet_1 }}</li>
+        <li>{{ section.settings.why_row1_bullet_2 }}</li>
+        <li>{{ section.settings.why_row1_bullet_3 }}</li>
+      </ul>
+    </div>
+    <div class="why-img" style="background-image:url('{% if section.settings.why_row1_image != blank %}{{ section.settings.why_row1_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80{% endif %}')"></div>
+  </div>
+  <hr class="why-divider">
+
+  <div class="why-row reverse">
+    <div class="why-content">
+      <p class="why-label">{{ section.settings.why_row2_label }}</p>
+      <p class="why-title">{{ section.settings.why_row2_title_1 }}<br>{{ section.settings.why_row2_title_2 }}</p>
+      <ul class="why-list">
+        <li>{{ section.settings.why_row2_bullet_1 }}</li>
+        <li>{{ section.settings.why_row2_bullet_2 }}</li>
+        <li>{{ section.settings.why_row2_bullet_3 }}</li>
+      </ul>
+    </div>
+    <div class="why-img" style="background-image:url('{% if section.settings.why_row2_image != blank %}{{ section.settings.why_row2_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80{% endif %}')"></div>
+  </div>
+  <hr class="why-divider">
+
+  <div class="why-row">
+    <div class="why-content">
+      <p class="why-label">{{ section.settings.why_row3_label }}</p>
+      <p class="why-title">{{ section.settings.why_row3_title_1 }}<br>{{ section.settings.why_row3_title_2 }}</p>
+      <ul class="why-list">
+        <li>{{ section.settings.why_row3_bullet_1 }}</li>
+        <li>{{ section.settings.why_row3_bullet_2 }}</li>
+        <li>{{ section.settings.why_row3_bullet_3 }}</li>
+      </ul>
+    </div>
+    <div class="why-img" style="background-image:url('{% if section.settings.why_row3_image != blank %}{{ section.settings.why_row3_image | image_url: width: 900 }}{% else %}https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80{% endif %}')"></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B — Why Partner",
+  "tag": "div",
+  "class": "b2b-page",
+  "settings": [
+    { "type": "text", "id": "why_label", "label": "Section Label", "default": "Partnership" },
+    { "type": "text", "id": "why_title", "label": "Section Title", "default": "Why Partner With The Gallery Home" },
+    { "type": "header", "content": "Row 1" },
+    { "type": "image_picker", "id": "why_row1_image", "label": "Image" },
+    { "type": "text", "id": "why_row1_label", "label": "Label", "default": "Design & Craft" },
+    { "type": "text", "id": "why_row1_title_1", "label": "Title Line 1", "default": "Designed & Handcrafted" },
+    { "type": "text", "id": "why_row1_title_2", "label": "Title Line 2", "default": "In Dubai" },
+    { "type": "text", "id": "why_row1_bullet_1", "label": "Bullet 1", "default": "All pieces manufactured locally in our Dubai facility" },
+    { "type": "text", "id": "why_row1_bullet_2", "label": "Bullet 2", "default": "Full quality control from material to delivery" },
+    { "type": "text", "id": "why_row1_bullet_3", "label": "Bullet 3", "default": "Faster lead times than imported alternatives" },
+    { "type": "header", "content": "Row 2" },
+    { "type": "image_picker", "id": "why_row2_image", "label": "Image" },
+    { "type": "text", "id": "why_row2_label", "label": "Label", "default": "Project Support" },
+    { "type": "text", "id": "why_row2_title_1", "label": "Title Line 1", "default": "Dedicated Account" },
+    { "type": "text", "id": "why_row2_title_2", "label": "Title Line 2", "default": "Manager For Every Project" },
+    { "type": "text", "id": "why_row2_bullet_1", "label": "Bullet 1", "default": "One point of contact from brief to installation" },
+    { "type": "text", "id": "why_row2_bullet_2", "label": "Bullet 2", "default": "Access to our full material and fabric library" },
+    { "type": "text", "id": "why_row2_bullet_3", "label": "Bullet 3", "default": "Trade pricing and referral commission programme" },
+    { "type": "header", "content": "Row 3" },
+    { "type": "image_picker", "id": "why_row3_image", "label": "Image" },
+    { "type": "text", "id": "why_row3_label", "label": "Label", "default": "End To End" },
+    { "type": "text", "id": "why_row3_title_1", "label": "Title Line 1", "default": "White Glove Delivery" },
+    { "type": "text", "id": "why_row3_title_2", "label": "Title Line 2", "default": "& Installation" },
+    { "type": "text", "id": "why_row3_bullet_1", "label": "Bullet 1", "default": "Professional installation across Dubai, Abu Dhabi & GCC" },
+    { "type": "text", "id": "why_row3_bullet_2", "label": "Bullet 2", "default": "Coordinated around your project schedule" },
+    { "type": "text", "id": "why_row3_bullet_3", "label": "Bullet 3", "default": "Custom sizing and site measurements included" }
+  ],
+  "presets": [{ "name": "B2B — Why Partner" }]
+}
+{% endschema %}
